@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Volkswagen</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Owl Carousel -->
+    <link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+    <link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+
+    <!-- Magnific Popup -->
+    <link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/app.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/axios.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            portfolio.init();
+            contact.init();
+            solicitud.init();
+        });
+
+        portfolio = {
+            init: function() {
+                $("a.portfolio").click(function() {
+                    elementClick = $(this).attr("href")
+                    destination = $(elementClick).offset().top;
+                    $("html:not(:animated),body:not(:animated)").animate({
+                        scrollTop: destination
+                    }, 1100);
+                    return false;
+                })
+            }
+        }
+
+        contact = {
+            init: function() {
+                $("a.contact").click(function() {
+                    elementClick = $(this).attr("href")
+                    destination = $(elementClick).offset().top;
+                    $("html:not(:animated),body:not(:animated)").animate({
+                        scrollTop: destination
+                    }, 1100);
+                    return false;
+                })
+            }
+        }
+
+        solicitud = {
+            init: function() {
+                $(".solicitud").click(function() {
+                    elementClick = $(this).attr("href")
+                    destination = $(elementClick).offset().top;
+                    $("html:not(:animated),body:not(:animated)").animate({
+                        scrollTop: destination
+                    }, 1100);
+                    return false;
+                })
+            }
+        }
+    </script>
+</head>
+
+<body onload="removeAdds(); return false;">
+    <!-- Header -->
+    <header id="home">
+        <!-- Background Image -->
+        <div class="bg-img" style="background-image: url('./img/background1.jpg');">
+            <div class="overlay"></div>
+        </div>
+        <!-- /Background Image -->
+
+        <!-- Nav -->
+        <nav id="nav" class="navbar nav-transparent">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <!-- Logo -->
+                    <div class="navbar-brand">
+                        <a href="index.html">
+                            <img class="logo" src="img/logo.png" alt="logo">
+                            <img class="logo-alt" src="img/logo-alt.png" alt="logo">
+                        </a>
+                    </div>
+                    <!-- /Logo -->
+
+                    <!-- Collapse nav button -->
+                    <div class="nav-collapse">
+                        <span></span>
+                    </div>
+                    <!-- /Collapse nav button -->
+                </div>
+
+                <!--  Main navigation  -->
+                <ul class="main-nav nav navbar-nav navbar-right">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Acerca</a></li>
+                    <li><a href="#service">Beneficios</a></li>
+                    <li><a href="#portfolio">Vehiculos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+                <!-- /Main navigation -->
+
+            </div>
+        </nav>
+        <!-- /Nav -->
+
+        <!-- home wrapper -->
+        <div class="home-wrapper">
+            <div class="container">
+                <div class="row">
+
+                    <!-- home content -->
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="home-content">
+                            <h1 class="white-text">Autoahorro Volkswagen</h1>
+                            <p class="white-text">Subite a tu Volkswagen 0km.
+                            </p>
+                            <br>
+                            <p class="white-text" style="font-size:120%;">¡Completa el formulario para que podamos enviarte la información que necesitas!</p>
+                            <a href="#features" class="white-btn portfolio">Más Información</a>
+                            <a href="#contact" class="main-btn contact">Contactar</a>
+                        </div>
+                    </div>
+                    <!-- /home content -->
+
+                </div>
+            </div>
+        </div>
+        <!-- /home wrapper -->
+
+    </header>
+    <!-- /Header -->
+
+    <!-- Why Choose Us -->
+    <div id="features" class="section md-padding bg-grey">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+                <!-- why choose us content -->
+                <div class="col-md-6">
+                    <div class="section-header">
+                        <h2 class="title">¿Por qué elegir Autoahorro Volkswagen?</h2>
+                    </div>
+                    <p>Autoahorro Volkswagen es el plan de ahorro Nº 1 del país, porque te ofrece la posibilidad de tener tu 0 Km a través de cuotas accesibles. Además cuenta con modelos con entrega anticipada en la cuota Nº 3. </p>
+                    <p>Envianos tu consulta y descubrí todos los beneficios del Plan Año Seguro, el plan líder.</p>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <p>Te ofrecemos la mejor financiación para la compra de tu nuevo 0km.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <p>Reserva tu plan y obtene importantes bonificaciones.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <p>Tener tu 0km nunca fue tan fácil.</p>
+                    </div>
+                </div>
+                <!-- /why choose us content -->
+
+                <!-- About slider -->
+                <div class="col-md-6">
+                    <div id="about-slider" class="owl-carousel owl-theme">
+                        <img class="img-responsive" src="img/autoahorro4.png" alt="">
+                    </div>
+                </div>
+                <!-- /About slider -->
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
+    <!-- /Why Choose Us -->
+
+    <!-- Service -->
+    <div id="service" class="section md-padding">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+                <!-- Section header -->
+                <div class="section-header text-center">
+                    <h2 class="title">Beneficios</h2>
+                </div>
+                <!-- /Section header -->
+
+                <!-- service -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="service">
+                        <i class="fa fa-diamond"></i>
+                        <h3>12 Cuotas Fijas</h3>
+                        <p>Esto te permite tener un esquema de estabilidad durante el primer año, potenciando de esta manera las virtudes del plan de ahorro agregando a la cualidad de ser un medio de financiamiento sin tasa de interés.</p>
+                    </div>
+                </div>
+                <!-- /service -->
+
+                <!-- service -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="service">
+                        <i class="fa fa-rocket"></i>
+                        <h3>Seguro de Cancelación de Cuotas</h3>
+                        <p>Te brinda la seguridad de que puedas continuar pagando las cuotas de tu plan de ahorro ante una interrupción imprevista en tus ingresos.</p>
+                    </div>
+                </div>
+                <!-- /service -->
+
+                <!-- service -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="service">
+                        <i class="fa fa-cogs"></i>
+                        <h3>Adjudicación Asegurada en la Cuota 3</h3>
+                        <p>Para poder acceder al beneficio de la adjudicación asegurada se deberán integrar 24 cuotas hasta el último día hábil del mes anterior a la realización del acto de adjudicación del grupo.</p>
+                    </div>
+                </div>
+                <!-- /service -->
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
+    <!-- /Service -->
+
+
+    <!-- Portfolio -->
+    <div id="portfolio" class="section md-padding bg-grey">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+                <!-- Section header -->
+                <div class="section-header text-center">
+                    <h2 class="title">Vehiculos</h2>
+                </div>
+                <!-- /Section header -->
+
+                <!-- Work -->
+                <div class="col-md-4 col-xs-6 work">
+                    <img class="img-responsive" src="img-cars/up_.png" alt="">
+                    <div class="overlay"></div>
+                    <div class="work-content">
+                        <span style="font-size: 150%;">UP</span>
+                        <h3 style="font-size: 90%;">Coche urbano de la familia de Volkswagen.</h3>
+                        <div class="work-link">
+                            <a href="#contact" onclick="insertCar('Up Volkswagen'); return false;" class="solicitud"><i class="fa fa-external-link"></i></a>
+                            <a class="lightbox" href="img-cars/up_.png"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Work -->
+
+                <!-- Work -->
+                <div class="col-md-4 col-xs-6 work">
+                    <img class="img-responsive" src="img-cars/nuevoGol_.png" alt="">
+                    <div class="overlay"></div>
+                    <div class="work-content">
+                        <span style="font-size: 150%;">Nuevo Gol</span>
+                        <h3 style="font-size: 90%;">Divertido. Como siempre. Con un diseño fresco y renovado, el Gol transmite confianza e innovación.</h3>
+                        <div class="work-link">
+                            <a href="#contact" onclick="insertCar('Nuevo Gol Volkswagen'); return false;" class="solicitud"><i class="fa fa-external-link"></i></a>
+                            <a class="lightbox" href="img-cars/nuevoGol_.png"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Work -->
+
+                <!-- Work -->
+                <div class="col-md-4 col-xs-6 work">
+                    <img class="img-responsive" src="img-cars/voyage.png" alt="">
+                    <div class="overlay"></div>
+                    <div class="work-content">
+                        <span style="font-size: 150%;">Voyage</span>
+                        <h3 style="font-size: 90%;">Lo único importante es tener claro lo que quieres, y Voyage te puede dar eso y mucho más.</h3>
+                        <div class="work-link">
+                            <a href="#contact" onclick="insertCar('Voyage Volkswagen'); return false;" class="solicitud"><i class="fa fa-external-link"></i></a>
+                            <a class="lightbox" href="img-cars/voyage.png"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Work -->
+
+                <!-- Work -->
+                <div class="col-md-4 col-xs-6 work">
+                    <img class="img-responsive" src="img-cars/polo.png" alt="">
+                    <div class="overlay"></div>
+                    <div class="work-content">
+                        <span style="font-size: 150%;">Polo</span>
+                        <h3 style="font-size: 90%;">El auto compacto ideal para quien busca rebasar lo cotidiano.</h3>
+                        <div class="work-link">
+                            <a href="#contact" onclick="insertCar('Polo Volkswagen'); return false;" class="solicitud"><i class="fa fa-external-link"></i></a>
+                            <a class="lightbox" href="img-cars/polo.png"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Work -->
+
+                <!-- Work -->
+                <div class="col-md-4 col-xs-6 work">
+                    <img class="img-responsive" src="img-cars/virtus.png" alt="">
+                    <div class="overlay"></div>
+                    <div class="work-content">
+                        <span style="font-size: 150%;">Virtus</span>
+                        <h3 style="font-size: 90%;">Inteligencia, seguridad Y un diseño atractivo del nuevo Virtus.</h3>
+                        <div class="work-link">
+                            <a href="#contact" onclick="insertCar('Virtus Volkswagen'); return false;" class="solicitud"><i class="fa fa-external-link"></i></a>
+                            <a class="lightbox" href="img-cars/virtus.png"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Work -->
+
+                <!-- Work -->
+                <div class="col-md-4 col-xs-6 work">
+                    <img class="img-responsive" src="img-cars/suran.png" alt="">
+                    <div class="overlay"></div>
+                    <div class="work-content">
+                        <span style="font-size: 150%;">Suran</span>
+                        <h3 style="font-size: 90%;">Se destaca por su gran espacio interior y su volante multifunción, garantizando una experiencia de manejo placentera, funcional y práctica.</h3>
+                        <div class="work-link">
+                            <a href="#contact" onclick="insertCar('Suran Volkswagen'); return false;" class="solicitud"><i class="fa fa-external-link"></i></a>
+                            <a class="lightbox" href="img-cars/suran.png"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Work -->
+
+                <!-- Work -->
+                <div class="col-md-4 col-xs-6 work">
+                    <img class="img-responsive" src="img-cars/amarok.png" alt="">
+                    <div class="overlay"></div>
+                    <div class="work-content">
+                        <span style="font-size: 150%;">Amarok</span>
+                        <h3 style="font-size: 90%;">Diseño único que marca diferencias, construcción robusta, gran performance y tecnología.</h3>
+                        <div class="work-link">
+                            <a href="#contact" onclick="insertCar('Amarok Volkswagen'); return false;" class="solicitud"><i class="fa fa-external-link"></i></a>
+                            <a class="lightbox" href="img-cars/amarok.png"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Work -->
+
+                <!-- Work -->
+                <div class="col-md-4 col-xs-6 work">
+                    <img class="img-responsive" src="img-cars/saveiro.png" alt="">
+                    <div class="overlay"></div>
+                    <div class="work-content">
+                        <span style="font-size: 150%;">Saveiro</span>
+                        <h3 style="font-size: 90%;">La mejor combinación de un vehículo de trabajo y aventurero. Cabina simple, extendida y doble..</h3>
+                        <div class="work-link">
+                            <a href="#contact" onclick="insertCar('Saveiro Volkswagen'); return false;" class="solicitud"><i class="fa fa-external-link"></i></a>
+                            <a class="lightbox" href="img-cars/saveiro.png"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Work -->
+
+
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
+    <!-- /Portfolio -->
+
+    <!-- Contact -->
+    <div id="contact" class="section md-padding">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+                <!-- Section-header -->
+                <div class="section-header text-center">
+                    <h2 class="title">Contacto</h2>
+                </div>
+                <!-- /Section-header -->
+
+                <!-- contact -->
+                <div class="col-sm-4">
+                    <div class="contact">
+                        <i class="fa fa-phone"></i>
+                        <h3>Telefono</h3>
+                        <p>0379-154-003300</p>
+                    </div>
+                </div>
+                <!-- /contact -->
+
+                <!-- contact -->
+                <div class="col-sm-4">
+                    <div class="contact">
+                        <i class="fa fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>tucerokmencuotas@hotmail.com</p>
+                    </div>
+                </div>
+                <!-- /contact -->
+
+                <!-- contact -->
+                <div class="col-sm-4">
+                    <div class="contact">
+                        <i class="fa fa-map-marker"></i>
+                        <h3>País</h3>
+                        <p>Corrientes - Argentina</p>
+                    </div>
+                </div>
+                <!-- /contact -->
+
+                <!-- contact form -->
+                <div class="col-md-8 col-md-offset-2" id="temp">
+                    <form class="contact-form">
+                        <input type="text" id="name" class="input" placeholder="Nombre">
+                        <input type="text" id="phone" class="input" placeholder="Telefono">
+                    </form>
+                </div>
+
+                <div class="col-md-8 col-md-offset-2">
+                    <form class="contact-form">
+                        <input type="text" id="car" class="input" placeholder="Vehiculo">
+                        <input type="email" id="email" class="input" placeholder="Email">
+                        <button onclick="send(); return false;" class="main-btn">Enviar Solicitud</button>
+                    </form>
+                </div>
+                <!-- /contact form -->
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
+    <!-- /Contact -->
+
+
+    <!-- Footer -->
+    <footer id="footer" class="sm-padding bg-dark">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <!-- footer logo -->
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="img/logo-alt.png" alt="logo"></a>
+                    </div>
+                    <!-- /footer logo -->
+
+                    <!-- footer follow -->
+                    <ul class="footer-follow">
+                        <li><a href="https://www.facebook.com/VolkswagenVE/?brand_redir=126633520699374"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/vwargentina?lang=es"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/volkswagen/?hl=es-la"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/user/myvolkswagen"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                    <!-- /footer follow -->
+
+                    <!-- footer copyright -->
+                    <div class="footer-copyright">
+                        <p>Copyright © 2018. Autoahorro Volkswagen</p>
+                    </div>
+                    <!-- /footer copyright -->
+
+                </div>
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Back to top -->
+    <div id="back-to-top"></div>
+    <!-- /Back to top -->
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- /Preloader -->
+
+    <!-- jQuery Plugins -->
+
+    <script type="text/javascript" src="js/vue.js"></script>
+
+    <script type="text/javascript" src="js/vuejs-dialog.min.js"></script>
+
+    <script>
+        window.Vue.use(VuejsDialog.default)
+    </script>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
